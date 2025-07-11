@@ -1,0 +1,16 @@
+---
+interface Props {
+    size: number
+}
+
+const { size } = Astro.props
+---
+
+<img
+    class="rounded-full select-none"
+    src="https://avatars.githubusercontent.com/u/81579850"
+    width={size}
+    height={size}
+    alt="Avatar"
+    draggable={false}
+/>
