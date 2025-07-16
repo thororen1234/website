@@ -1,7 +1,7 @@
 ---
 import type { AstroComponent } from '@lucide/astro'
 import Avatar from '../Base/Avatar.astro'
-import Container from '../Base/Container.astro'
+import Box from '../Base/Box.astro'
 import { MapPin, User, Book, Heart, Twitter, Github, Mail } from '@lucide/astro'
 
 interface Social {
@@ -36,8 +36,8 @@ const Socials: Social[] = [
 
 <div class="flex w-full flex-col items-center gap-4 md:max-w-[256px]">
     <Avatar size={256} />
-    <Container>
-        <h3 class="font-semibold text-neutral-400">About</h3>
+    <Box>
+        <h4 class="text-sm font-semibold text-neutral-400">About</h4>
 
         <span class="flex items-center gap-1 font-medium text-indigo-300">
             <MapPin size="18" /> Greece</span
@@ -50,9 +50,9 @@ const Socials: Social[] = [
         <span class="flex items-center gap-1 font-medium text-indigo-300">
             <Book size="18" /> Self-taught</span
         >
-    </Container>
-    <Container>
-        <h3 class="font-semibold text-neutral-400">Socials</h3>
+    </Box>
+    <Box>
+        <h4 class="text-sm font-semibold text-neutral-400">Socials</h4>
         {
             Socials.map((social) => (
                 <a
@@ -65,5 +65,5 @@ const Socials: Social[] = [
                 </a>
             ))
         }
-    </Container>
+    </Box>
 </div>
