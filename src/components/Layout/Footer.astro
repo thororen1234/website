@@ -1,16 +1,10 @@
----
-import { Code } from '@lucide/astro'
----
-
 <footer class="flex items-center justify-between py-12 text-sm">
-    <span class="font-medium text-neutral-400"
-        >© {new Date().getFullYear()} Naibuu</span
-    >
-    <a
-        href="https://github.com/Naibuu/website"
-        target="_blank"
-        class="flex items-center gap-1 font-medium text-indigo-300 hover:underline"
-    >
-        <Code size="18" fill="#ffffff10" />Source</a
-    >
+    <span class="text-neutral-600 dark:text-neutral-400">
+        © {new Date().getFullYear()} Naibuu
+    </span>
+
+    <p class="text-neutral-600 dark:text-neutral-400">
+        Website is inspired by
+        <a href="https://wingio.xyz/" class="underline">Wing</a>.
+    </p>
 </footer>
