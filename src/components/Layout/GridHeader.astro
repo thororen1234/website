@@ -5,13 +5,13 @@ import ThemeToggle from './ThemeToggle.svelte'
 const gridStyle = `background-image: url(${GridSvg.src}); background-size: 32px; background-position-y: -2px;`
 ---
 
-<div style={gridStyle} class="absolute inset-0 -z-10 h-96 w-full">
+<div style={gridStyle} class="pointer-events-none absolute inset-0 -z-10 h-96 w-full">
     <div
         class="size-full bg-gradient-to-t from-zinc-200 to-zinc-200/95 dark:from-zinc-950 dark:to-zinc-950/95"
     >
     </div>
 
-    <div class="absolute inset-3">
+    <div class="pointer-events-all z-10 absolute inset-3">
         <ThemeToggle client:load />
     </div>
 </div>
