@@ -1,6 +1,8 @@
 ---
-import '../styles/global.css'
-import Head from '../components/Layout/Head.astro'
+import '@/styles/global.css'
+
+import Head from '@/components/Layout/Head.astro'
+import GridHeader from '@/components/Layout/GridHeader.astro'
 ---
 
 <!doctype html>
@@ -9,6 +11,7 @@ import Head from '../components/Layout/Head.astro'
         <Head title="Naibuu" description="Page not found." />
     </head>
     <body>
+        <GridHeader />
         <slot />
     </body>
 </html>

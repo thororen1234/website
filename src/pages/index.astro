@@ -1,63 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { Calendar } from '@lucide/astro'
+import { UserCircle, Notebook, Star } from '@lucide/astro'
+import { Skills, Projects } from '@/consts'
 
-import Box from '../components/Base/Box.astro'
-import Progress from '../components/Base/Progress.astro'
-import Chip from '../components/Base/Chip.astro'
-
-import { Skills, Projects } from '../scripts/data'
+import Box from '@/components/Base/Box.astro'
+import SkillCard from '@/components/Home/SkillCard.astro'
+import ProjectCard from '@/components/Home/ProjectCard.astro'
 ---
 
 <Layout>
+    <!-- Me -->
+    <span
+        class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+    >
+        <UserCircle size="18" fill="#ffffff10" /> Me
+    </span>
+
     <Box>
-        <h4 class="text-sm font-semibold text-neutral-400">Me</h4>
-
-        <h1 class="text-lg font-semibold text-indigo-300">Hi, I'm Alex!</h1>
-
-        <p class="font-medium text-neutral-200">
-            I'm a software developer and designer from Greece with experience in
-            languages like TypeScript, Python, C++, and Rust. At the moment, I'm
-            working as a freelancer, taking on projects and commissions.
-        </p>
+        Hi! I'm Alex! I'm a software developer and designer from Greece with
+        experience in languages like TypeScript, Python, C++, and a bit of Rust.
     </Box>
+
+    <!-- Skills -->
+    <span
+        class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+    >
+        <Star size="18" fill="#ffffff10" /> Skills
+    </span>
+
     <Box>
-        <h4 class="text-sm font-semibold text-neutral-400">Skills</h4>
-
-        <p class="mb-4 font-medium text-neutral-200">
-            I'm skilled in areas listed below. I'm also highly skilled at
-            working in teams, communicating, and delivering results quickly.
-        </p>
-
-        {Skills.map((skill) => <Progress {...skill} />)}
+        {Skills.map((skill) => <SkillCard {...skill} />)}
     </Box>
-    <h4 class="text-sm font-semibold text-neutral-400">Projects</h4>
-    {
-        Projects.map((project) => (
-            <a href={project.url} target="_blank" class="group">
-                <Box>
-                    <div class="flex items-center gap-2">
-                        <h1 class="text-lg font-semibold text-indigo-300">
-                            {project.title}
-                        </h1>
 
-                        <span class="flex items-center gap-1 text-sm font-medium transition group-hover:text-indigo-300">
-                            <Calendar size="18" fill="#ffffff10" />
-                            {project.year}
-                        </span>
-                    </div>
+    <!-- Projects -->
+    <span
+        class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+    >
+        <Notebook size="18" fill="#ffffff10" /> Projects
+    </span>
 
-                    <p class="font-medium text-neutral-200 transition group-hover:text-indigo-300">
-                        {project.text}
-                    </p>
-
-                    <div class="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                            <Chip>{tag}</Chip>
-                        ))}
-                    </div>
-                </Box>
-            </a>
-        ))
-    }
+    {Projects.map((project) => <ProjectCard {...project} />)}
 </Layout>
