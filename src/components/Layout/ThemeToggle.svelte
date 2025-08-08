@@ -24,7 +24,7 @@
 
 <button
     on:click={toggleTheme}
-    class="size-10 flex items-center justify-center text-neutral-600 dark:text-neutral-200 border bg-zinc-100 border-zinc-300 rounded-lg cursor-pointer transition-transform active:scale-[.97] hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-900 dark:border-zinc-800"
+    class="z-20 size-10 flex items-center justify-center text-neutral-600 dark:text-neutral-200 border bg-zinc-100 border-zinc-300 rounded-lg cursor-pointer transition-transform active:scale-[.97] hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-900 dark:border-zinc-800"
 >
     {#if currentTheme === 'dark'}
         <Moon size="16" />
