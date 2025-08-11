@@ -28,12 +28,6 @@ export const Socials: Social[] = [
         url: 'https://s.thororen.com/github',
         icon: Github,
     },
-    // TODO(thororen): Update this.
-    // {
-    //     text: 'Email',
-    //     url: 'mailto:me@naibuu.dev',
-    //     icon: Mail,
-    // },
 ]
 
 export const Skills: Skill[] = [
@@ -81,9 +75,10 @@ export const Projects: Project[] = [
     },
     {
         start: 2020,
+        end: 2021,
         title: 'Beycord',
         description:
             'Beycord is an open source Discord bot dedicated to bringing the fun and memes of Beyblade into Discord.',
-        url: 'https://github.com/disbored/beycord',
+        url: 'https://thororen.com/beycord',
     },
 ]
