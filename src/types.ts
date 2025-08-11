@@ -1,19 +1,17 @@
 import type { AstroComponent as LucideComponent } from '@lucide/astro'
 
-export type Theme = 'light' | 'dark'
-
-export interface Info {
+// Base interface structure for any item that has an icon and a text.
+export interface BaseItem {
     icon: LucideComponent
     text: string
 }
 
-export interface Social extends Info {
+export interface Social extends BaseItem {
     url: string
 }
 
-export interface Skill {
-    text: string
-    description: string
+export interface Skill extends BaseItem {
+    subtext: string
     progress: number
 }
 
@@ -23,12 +21,4 @@ export interface Project {
     title: string
     description: string
     url: string
-}
-
-export interface Product {
-    url: string
-    cover: string
-    title: string
-    description: string
-    price: number // 0 = Free
 }

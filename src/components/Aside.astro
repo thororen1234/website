@@ -1,0 +1,38 @@
+---
+import { Information, Socials } from '@/consts'
+import Avatar from '@/components/Avatar.astro'
+import Box from '@/components/Box.astro'
+---
+
+<aside class="flex w-full flex-col items-center gap-4 md:max-w-[240px]">
+    <Avatar size={240} />
+
+    <Box>
+        <span class="text-sm font-medium text-neutral-400"> About </span>
+
+        {
+            Information.map((info) => (
+                <span class="flex items-center gap-1 font-medium text-neutral-200">
+                    <info.icon size="18" fill="#ffffff10" />
+                    {info.text}
+                </span>
+            ))
+        }
+    </Box>
+
+    <Box>
+        <span class="text-sm font-medium text-neutral-400"> Socials </span>
+        {
+            Socials.map((social) => (
+                <a
+                    href={social.url}
+                    target="_blank"
+                    class="flex items-center gap-1 font-medium text-neutral-200 transition-colors hover:text-sky-500"
+                >
+                    <social.icon size="18" fill="#ffffff10" />
+                    {social.text}
+                </a>
+            ))
+        }
+    </Box>
+</aside>
