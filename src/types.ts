@@ -10,7 +10,8 @@ export interface Social extends BaseItem {
     url: string
 }
 
-export interface Skill extends BaseItem {
+export interface Skill {
+    text: string
     subtext: string
     progress: number
 }

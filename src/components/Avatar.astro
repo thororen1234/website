@@ -7,10 +7,24 @@ const { size } = Astro.props
 ---
 
 <img
-    class="rounded-full shadow select-none"
-    src="https://avatars.githubusercontent.com/u/81579850"
+    id="avatar"
+    class="rounded-full border border-zinc-800 bg-zinc-900 shadow select-none"
     width={size}
     height={size}
-    alt="Avatar"
     draggable={false}
 />
+
+<script>
+    fetch('https://lanyard.equicord.org/v1/users/848339671629299742')
+        .then((res) => res.json())
+        .then((data) => {
+            const user = data.data?.discord_user
+
+            if (user && user.avatar) {
+                const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=240`
+                // @ts-ignore - stop bitching
+                document.getElementById('avatar').src = avatarUrl
+            }
+        })
+        .catch((err) => console.error('Failed to fetch Discord avatar:', err))
+</script>

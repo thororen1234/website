@@ -1,111 +1,89 @@
-import type { Info, Social, Skill, Project, Product } from './types'
-import {
-    MapPin,
-    User,
-    GraduationCap,
-    Heart,
-    Twitter,
-    Github,
-    Mail,
-} from '@lucide/astro'
+import type { BaseItem, Social, Skill, Project } from './types'
+import { MapPin, User, Heart, Twitter, Github, Mail } from '@lucide/astro'
 
-export const Information: Info[] = [
+export const Information: BaseItem[] = [
     {
         icon: MapPin,
-        text: 'Greece',
+        text: 'United States',
     },
     {
         icon: User,
         text: 'He/Him',
-    },
-    {
-        icon: GraduationCap,
-        text: 'Self-taught',
     },
 ]
 
 export const Socials: Social[] = [
     {
         text: 'Donate',
-        url: 'https://s.naibuu.dev/kofi',
+        url: 'https://s.thororen.com/donate',
         icon: Heart,
     },
     {
         text: 'Twitter',
-        url: 'https://s.naibuu.dev/twitter',
+        url: 'https://s.thororen.com/twitter',
         icon: Twitter,
     },
     {
         text: 'Github',
-        url: 'https://s.naibuu.dev/github',
+        url: 'https://s.thororen.com/github',
         icon: Github,
     },
-    {
-        text: 'Email',
-        url: 'mailto:me@naibuu.dev',
-        icon: Mail,
-    },
+    // TODO(thororen): Update this.
+    // {
+    //     text: 'Email',
+    //     url: 'mailto:me@naibuu.dev',
+    //     icon: Mail,
+    // },
 ]
 
 export const Skills: Skill[] = [
     {
         text: 'Software development',
-        description: 'Visual Studio, Visual Studio Code and IntelliJ',
-        progress: 75,
-    },
-    {
-        text: 'Graphic design',
-        description: 'Photoshop and Figma',
-        progress: 90,
+        subtext: 'Visual Studio Code',
+        progress: 85,
     },
     {
         text: 'Web development',
-        description: 'SSR Frameworks, React, Vue and Astro',
-        progress: 85,
+        subtext: 'SSR Frameworks and React',
+        progress: 75,
     },
 ]
 
 export const Projects: Project[] = [
     {
         start: 2023,
+        title: 'Equicord',
+        description:
+            'The other cutest Discord mod, currently maintaining and working on the entire project.',
+        url: 'https://equicord.org',
+    },
+    {
+        start: 2023,
         title: 'CheatBreaker',
         description:
-            'CheatBreaker is a free FPS-boosting modpack for Minecraft. I collaborated with the team on developing a new launcher, serving as the lead designer for the project.',
+            'CheatBreaker is a free FPS-boosting modpack for Minecraft. I collaborated with the team on developing a new launcher.',
         url: 'https://cheatbreaker.net',
     },
     {
         start: 2025,
-        title: 'Rend',
+        title: 'Disbored',
         description:
-            'Rend is a game distribution platform that allows players to easily discover and enjoy a diverse selection of games. As a co-owner of the project, I contributed to the design and development of much of the front-end.',
-        url: 'https://rend.sh',
+            'Disbored (aka surg) is just a giant repository org handling Discord bots, prs to places, websites and more.',
+        url: 'https://surg.fyi/',
     },
     {
-        start: 2023,
-        end: 2024,
-        title: 'Ancify',
+        start: 2022,
+        end: 2023,
+        title: 'Solar Tweaks',
         description:
-            'Ancify is a launcher that makes server emulators easier to find and more accessible. I contributed significantly to the front-end development, including work on the launcher itself.',
-        url: 'https://ancify.io/',
-    },
-    {
-        start: 2023,
-        end: 2024,
-        title: 'Hybris',
-        description:
-            'Hybris is a free and open-source Minecraft modpack that aims to improve the gameplay experience and introduce a flexible modding framework for developers. My contribution was leading the design efforts for both the client and the launcher.',
+            'Solar Tweaks is a custom Lunar Client launcher that provides different modifications for the client.',
         url: 'https://github.com/hybrismc',
     },
-]
-
-// TODO: Temporarily here, will move the store into a database soon.
-export const Products: Product[] = [
     {
-        url: 'https://ko-fi.com/s/912ecfdefe',
-        cover: 'https://storage.ko-fi.com/cdn/useruploads/display/54baaebc-2398-4fe5-915d-9f9b0a143e6b_two.png',
-        title: 'Tweet Thumbnail (PSD)',
+        start: 2020,
+        title: 'Beycord',
         description:
-            'A clean, simple and customizable Twitter post template. This file includes editable layers (Avatar, Text, Background and etc.) and 3 different background samples.',
-        price: 0,
+            'Beycord is an open source Discord bot dedicated to bringing the fun and memes of Beyblade into Discord.',
+        url: 'https://github.com/disbored/beycord',
     },
 ]
