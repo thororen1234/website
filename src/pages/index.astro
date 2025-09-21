@@ -4,11 +4,14 @@ import { UserCircle, Notebook, Star } from '@lucide/astro'
 import { Skills, Projects } from '@/consts'
 
 import Box from '@/components/Base/Box.astro'
+import VPromo from '@/components/Home/VPromo.astro'
 import SkillCard from '@/components/Home/SkillCard.astro'
 import ProjectCard from '@/components/Home/ProjectCard.astro'
 ---
 
 <Layout>
+    <VPromo />
+
     <!-- Me -->
     <span
         class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"

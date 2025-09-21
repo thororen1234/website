@@ -60,12 +60,19 @@ export const Skills: Skill[] = [
     },
     {
         text: 'Web development',
-        description: 'SSR Frameworks, React, Vue and Astro',
+        description: 'SSR Frameworks, React, Svelte, Vue and Astro',
         progress: 85,
     },
 ]
 
 export const Projects: Project[] = [
+    {
+        start: 2025,
+        title: 'VTube Center',
+        description:
+            'Catch up with events, collabs and grow your fanbase. Helped design the website',
+        url: 'https://vtube.center',
+    },
     {
         start: 2023,
         title: 'CheatBreaker',
@@ -73,13 +80,13 @@ export const Projects: Project[] = [
             'CheatBreaker is a free FPS-boosting modpack for Minecraft. I collaborated with the team on developing a new launcher, serving as the lead designer for the project.',
         url: 'https://cheatbreaker.net',
     },
-    {
-        start: 2025,
-        title: 'Rend',
-        description:
-            'Rend is a game distribution platform that allows players to easily discover and enjoy a diverse selection of games. As a co-owner of the project, I contributed to the design and development of much of the front-end.',
-        url: 'https://rend.sh',
-    },
+    // {
+    //     start: 2025,
+    //     title: 'Rend',
+    //     description:
+    //         'Rend is a game distribution platform that allows players to easily discover and enjoy a diverse selection of games. As a co-owner of the project, I contributed to the design and development of much of the front-end.',
+    //     url: 'https://rend.sh',
+    // },
     {
         start: 2023,
         end: 2024,
