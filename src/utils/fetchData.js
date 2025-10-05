@@ -82,7 +82,7 @@ export async function fetchUserStatus() {
             const user = lanyardData?.discord_user;
             const avatar = `https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.png?size=240`
             const decorationData = user?.avatar_decoration_data;
-            const decor = `https://cdn.discordapp.com/avatar-decoration-presets/${decorationData?.asset}.png?size=64&passthrough=true`;
+            const decor = `https://cdn.discordapp.com/avatar-decoration-presets/${decorationData?.asset}.png?passthrough=true`;
 
             userData.status = lanyardData?.discord_status || "offline";
             userData.avatar = avatar;

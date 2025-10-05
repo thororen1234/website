@@ -101,3 +101,30 @@ export const Projects: Project[] = [
         url: 'https://thororen.com/beycord',
     },
 ]
+
+export const Friends = [
+    {
+        url: "https://creations.works",
+        img: "https://creations.works/public/assets/pfp.png",
+        alt: "creations",
+        name: "creations"
+    },
+    {
+        url: 'https://cortex.rest',
+        img: 'https://avatars.githubusercontent.com/u/126973723?v=4',
+        alt: 'environment.',
+        name: 'Cortex',
+    },
+    {
+        url: "https://indi.is-a-skid.cc",
+        img: "https://avatars.githubusercontent.com/u/150982280?v=4",
+        alt: "krystalskull",
+        name: "Krystal"
+    },
+    {
+        url: 'https://vmohammad.dev',
+        img: 'https://avatars.githubusercontent.com/u/62218284?v=4',
+        alt: 'vmohammad',
+        name: 'Mohammad',
+    },
+]
