@@ -1,5 +1,10 @@
 import type { BaseItem, Social, Skill, Project } from './types'
-import { MapPin, User, Heart, Twitter, Github, Mail } from '@lucide/astro'
+import { AlarmClock, BookOpen, Github, Heart, ListMusic, MapPin, User, Twitter } from '@lucide/astro'
+
+import Web from './assets/web.svg';
+import Mobile from './assets/mobile.svg';
+import Desktop from './assets/desktop.svg';
+import Embedded from './assets/embedded.svg';
 
 export const Information: BaseItem[] = [
     {
@@ -11,6 +16,20 @@ export const Information: BaseItem[] = [
         text: 'He/Him',
     },
 ]
+
+export const MiscIcons = {
+    User: User,
+    AlarmClock: AlarmClock,
+    BookOpen: BookOpen,
+    ListMusic: ListMusic,
+}
+
+export const Platforms = {
+    Web: Web,
+    Mobile: Mobile,
+    Desktop: Desktop,
+    Embedded: Embedded,
+}
 
 export const Socials: Social[] = [
     {

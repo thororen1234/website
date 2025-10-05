@@ -1,17 +1,17 @@
 ---
-import { fetchUserData } from '@/utils/fetchUserData'
+import { fetchUserStatus } from '@/utils/fetchData'
 
 interface Props {
     size: number
 }
 
 const { size } = Astro.props
-let avatarUrl = ''
+let avatar = ''
 let status: 'online' | 'idle' | 'dnd' | 'offline' = 'offline'
 
 // Fetch user data
-const userData = await fetchUserData()
-avatarUrl = userData.avatarUrl
+const userData = await fetchUserStatus()
+avatar = userData.avatar
 status = userData.status
 
 // Map status to color
@@ -27,7 +27,7 @@ const statusColor = statusColorMap[status] || '#949ba4'
 
 <div style="position: relative; display: inline-block; width: {size}px; height: {size}px;">
     <img
-        src={avatarUrl}
+        src={avatar}
         class="rounded-full border border-zinc-800 bg-zinc-900 shadow select-none"
         width={size}
         height={size}
