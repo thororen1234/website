@@ -2,14 +2,30 @@
 import { Information, Socials } from '@/consts'
 import Avatar from '@/components/Avatar.astro'
 import Box from '@/components/Box.astro'
+import { fetchUserData } from '@/utils/fetchUserData'
+
+const user = await fetchUserData();
 ---
 
 <aside class="flex w-full flex-col items-center gap-4 md:max-w-[240px]">
     <Avatar size={240} />
 
     <Box>
-        <span class="text-sm font-medium text-neutral-400"> About </span>
+        <span class="text-sm font-medium text-neutral-400"> Badges </span>
+        <div class="flex flex-wrap gap-2 mt-1">
+            {user.badges.map((badge) => (
+                <img
+                    src={badge.icon}
+                    alt={badge.tooltip}
+                    title={badge.tooltip}
+                    class="size-4 rounded"
+                />
+            ))}
+        </div>
+    </Box>
 
+    <Box>
+        <span class="text-sm font-medium text-neutral-400"> About </span>
         {
             Information.map((info) => (
                 <span class="flex items-center gap-1 font-medium text-neutral-200">
