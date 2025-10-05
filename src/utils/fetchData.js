@@ -15,7 +15,7 @@ export async function fetchUserData() {
 
     try {
 
-        const lanyardRes = await fetch(`https://lanyard.atums.world/v1/users/${userId}`);
+        const lanyardRes = await fetch(`https://lanyard.equicord.org/v1/users/${userId}`);
         if (lanyardRes.ok) {
             const lanyardJson = await lanyardRes.json();
             const lanyardData = lanyardJson?.data;
