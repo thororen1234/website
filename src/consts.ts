@@ -68,25 +68,19 @@ export const Skills: Skill[] = [
 export const Projects: Project[] = [
     {
         start: 2025,
-        title: 'VTube Center',
+        title: 'Equicord',
         description:
-            'Catch up with events, collabs and grow your fanbase. Helped design the website',
-        url: 'https://vtube.center',
+            'Equicord is an enhanced version of Vencord with a wide variety of plugins. Currently maintaining and working on the website.',
+        url: 'https://equicord.org',
     },
     {
         start: 2023,
+        end: 2025,
         title: 'CheatBreaker',
         description:
             'CheatBreaker is a free FPS-boosting modpack for Minecraft. I collaborated with the team on developing a new launcher, serving as the lead designer for the project.',
         url: 'https://cheatbreaker.net',
     },
-    // {
-    //     start: 2025,
-    //     title: 'Rend',
-    //     description:
-    //         'Rend is a game distribution platform that allows players to easily discover and enjoy a diverse selection of games. As a co-owner of the project, I contributed to the design and development of much of the front-end.',
-    //     url: 'https://rend.sh',
-    // },
     {
         start: 2023,
         end: 2024,
@@ -102,17 +96,5 @@ export const Projects: Project[] = [
         description:
             'Hybris is a free and open-source Minecraft modpack that aims to improve the gameplay experience and introduce a flexible modding framework for developers. My contribution was leading the design efforts for both the client and the launcher.',
         url: 'https://github.com/hybrismc',
-    },
-]
-
-// TODO: Temporarily here, will move the store into a database soon.
-export const Products: Product[] = [
-    {
-        url: 'https://ko-fi.com/s/912ecfdefe',
-        cover: 'https://storage.ko-fi.com/cdn/useruploads/display/54baaebc-2398-4fe5-915d-9f9b0a143e6b_two.png',
-        title: 'Tweet Thumbnail (PSD)',
-        description:
-            'A clean, simple and customizable Twitter post template. This file includes editable layers (Avatar, Text, Background and etc.) and 3 different background samples.',
-        price: 0,
     },
 ]

@@ -1,22 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { UserCircle, Notebook, Star } from '@lucide/astro'
 import { Skills, Projects } from '@/consts'
+import { Highlighter, Notebook, Star } from '@lucide/astro'
 
 import Box from '@/components/Base/Box.astro'
-import VPromo from '@/components/Home/VPromo.astro'
-import SkillCard from '@/components/Home/SkillCard.astro'
-import ProjectCard from '@/components/Home/ProjectCard.astro'
+import SkillCard from '@/components/SkillCard.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
 ---
 
 <Layout>
-    <VPromo />
-
     <!-- Me -->
     <span
         class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
     >
-        <UserCircle size="18" fill="#ffffff10" /> Me
+        <Highlighter size="18" fill="#ffffff10" /> Me
     </span>
 
     <Box>
@@ -42,5 +39,7 @@ import ProjectCard from '@/components/Home/ProjectCard.astro'
         <Notebook size="18" fill="#ffffff10" /> Projects
     </span>
 
-    {Projects.map((project) => <ProjectCard {...project} />)}
+    <div class="flex flex-wrap gap-3">
+        {Projects.map((project) => <ProjectCard {...project} />)}
+    </div>
 </Layout>

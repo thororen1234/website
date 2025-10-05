@@ -1,10 +1,9 @@
 ---
 import '@/styles/global.css'
-
 import Head from '@/components/Layout/Head.astro'
-import Header from '@/components/Layout/Header.astro'
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import Aside from '@/components/Aside.astro'
 import Footer from '@/components/Layout/Footer.astro'
-import Aside from '@/components/Home/Aside.astro'
 ---
 
 <!doctype html>
@@ -16,7 +15,7 @@ import Aside from '@/components/Home/Aside.astro'
         />
     </head>
     <body>
-        <Header />
+        <ThemeToggle />
         <main
             class="flex flex-col items-start gap-3 px-3 pt-16 md:flex-row md:gap-6 md:pt-40"
         >

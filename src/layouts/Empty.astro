@@ -1,8 +1,7 @@
 ---
 import '@/styles/global.css'
-
 import Head from '@/components/Layout/Head.astro'
-import Header from '@/components/Layout/Header.astro'
+import ThemeToggle from '@/components/ThemeToggle.astro'
 ---
 
 <!doctype html>
@@ -11,7 +10,7 @@ import Header from '@/components/Layout/Header.astro'
         <Head title="Naibuu" description="Page not found." />
     </head>
     <body>
-        <Header />
+        <ThemeToggle />
         <slot />
     </body>
 </html>
