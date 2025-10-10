@@ -51,6 +51,11 @@ export const Socials: Social[] = [
 
 export const Skills: Skill[] = [
     {
+        text: 'Software engineering',
+        subtext: 'JavaScript, TypeScript, and more',
+        progress: 95,
+    },
+    {
         text: 'Software development',
         subtext: 'Visual Studio Code',
         progress: 85,
