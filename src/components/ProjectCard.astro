@@ -16,7 +16,7 @@ const { start, end, title, description, url } = Astro.props
             >
                 {title}
                 <span class="flex items-center gap-1 text-sm">
-                    <Calendar size={16} fill="#ffffff10" />
+                    <Calendar size={16} />
                     {end ? `${start} - ${end}` : `Since ${start}`}
                 </span>
             </h4>

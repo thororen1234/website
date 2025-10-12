@@ -12,7 +12,7 @@ import Box from '@/components/Box.astro'
 
     <div class="flex items-start gap-2">
         <span class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            <BookUser size="18" fill="#ffffff10" /> Badges
+            <BookUser size="18" /> Badges
         </span>
 
         <div id="clan-badge-container" class="hidden items-center gap-1 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-md">
@@ -27,7 +27,7 @@ import Box from '@/components/Box.astro'
 
     <div class="flex items-start gap-2">
         <span class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            <BookUser size="18" fill="#ffffff10" /> Socials
+            <BookUser size="18"/> Socials
         </span>
 
         <div id="platform-icons" class="flex gap-1 text-neutral-600 dark:text-neutral-400"></div>
@@ -37,24 +37,24 @@ import Box from '@/components/Box.astro'
         {
             Information.map((info) => (
                 <span class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
-                    <info.icon size="18" fill="#ffffff10" />
+                    <info.icon size="18" />
                     {info.text}
                 </span>
             ))
         }
 
         <span class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
-            <MiscIcons.AlarmClock size="18" fill="#ffffff10" />
+            <MiscIcons.AlarmClock size="18" />
             <span id="user-timezone-text">--:--</span>
         </span>
 
         <span id="custom-status-container" class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
-            <MiscIcons.BookOpen size="18" fill="#ffffff10" class="shrink-0" />
+            <MiscIcons.BookOpen size="18" class="shrink-0" />
             <span id="custom-status-text" class="truncate"></span>
         </span>
 
         <span id="activity-container" class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
-            <MiscIcons.ListMusic size="18" fill="#ffffff10" class="shrink-0" />
+            <MiscIcons.ListMusic size="18" class="shrink-0" />
             <span id="activity-text" class="truncate"></span>
         </span>
     </Box>
