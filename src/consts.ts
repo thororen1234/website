@@ -1,4 +1,4 @@
-import type { BaseItem, Social, Skill, Project } from './types'
+import type { Info, Social, Skill, Project } from './types'
 import { AlarmClock, BookOpen, Github, Heart, ListMusic, MapPin, User, Twitter } from '@lucide/astro'
 
 import Web from './assets/web.svg';
@@ -6,7 +6,7 @@ import Mobile from './assets/mobile.svg';
 import Desktop from './assets/desktop.svg';
 import Embedded from './assets/embedded.svg';
 
-export const Information: BaseItem[] = [
+export const Information: Info[] = [
     {
         icon: MapPin,
         text: 'United States',
