@@ -115,27 +115,27 @@ export const Projects: Project[] = [
 
 export const Friends = [
     {
-        url: "https://creations.works",
-        img: "https://creations.works/public/assets/pfp.png",
-        alt: "creations",
-        name: "creations"
-    },
-    {
         url: "https://www.naibuu.dev",
         img: "https://avatars.githubusercontent.com/u/81579850",
         alt: "itsnaibuu",
         name: "Naibuu"
     },
     {
-        url: 'https://cortex.rest',
-        img: 'https://avatars.githubusercontent.com/u/126973723?v=4',
-        alt: 'environment.',
-        name: 'Cortex',
+        url: "https://creations.works",
+        img: "https://creations.works/public/assets/pfp.png",
+        alt: "creations",
+        name: "creations"
     },
     {
         url: "https://indi.is-a-skid.cc",
         img: "https://avatars.githubusercontent.com/u/150982280?v=4",
         alt: "krystalskull",
         name: "Krystal"
+    },
+    {
+        url: 'https://cortex.rest',
+        img: 'https://avatars.githubusercontent.com/u/126973723?v=4',
+        alt: 'environment.',
+        name: 'Cortex',
     },
 ]
