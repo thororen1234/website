@@ -115,6 +115,12 @@ export const Friends = [
         name: "creations"
     },
     {
+        url: "https://www.naibuu.dev",
+        img: "https://avatars.githubusercontent.com/u/81579850",
+        alt: "itsnaibuu",
+        name: "Naibuu"
+    },
+    {
         url: 'https://cortex.rest',
         img: 'https://avatars.githubusercontent.com/u/126973723?v=4',
         alt: 'environment.',
@@ -125,11 +131,5 @@ export const Friends = [
         img: "https://avatars.githubusercontent.com/u/150982280?v=4",
         alt: "krystalskull",
         name: "Krystal"
-    },
-    {
-        url: 'https://vmohammad.dev',
-        img: 'https://avatars.githubusercontent.com/u/62218284?v=4',
-        alt: 'vmohammad',
-        name: 'Mohammad',
     },
 ]
