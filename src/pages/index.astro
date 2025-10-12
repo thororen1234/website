@@ -6,14 +6,13 @@ import { Friends, Skills, Socials, Projects } from '@/consts'
 import Box from '@/components/Box.astro'
 import SkillCard from '@/components/SkillCard.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
-import Footer from '@/components/Footer.astro'
 ---
 
 <Layout>
     <div class="flex flex-col md:flex-row gap-6">
         <div class="flex-1 space-y-4">
             <!-- Me -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-400">
+            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 <UserCircle size="18" fill="#ffffff10" /> Me
             </span>
 
@@ -24,7 +23,7 @@ import Footer from '@/components/Footer.astro'
             </Box>
 
             <!-- Skills -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-400">
+            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 <Star size="18" fill="#ffffff10" /> Skills
             </span>
 
@@ -33,7 +32,7 @@ import Footer from '@/components/Footer.astro'
             </Box>
 
             <!-- Projects -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-400">
+            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 <Notebook size="18" fill="#ffffff10" /> Projects
             </span>
 
@@ -43,7 +42,7 @@ import Footer from '@/components/Footer.astro'
         </div>
 
         <aside class="w-full md:w-64 space-y-4">
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-400">
+            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 <Users size="18" fill="#ffffff10" /> Friends
             </span>
             <Box>
@@ -52,14 +51,14 @@ import Footer from '@/components/Footer.astro'
                         <li class="min-w-0 overflow-hidden">
                             <a href={friend.url} target="_blank" rel="noreferrer" class="flex flex-col items-center text-center gap-1" >
                                 <img src={friend.img} alt={friend.alt} class="size-10 rounded-full object-cover"/>
-                                <span class="text-xs text-neutral-300 truncate">{friend.name}</span>
+                                <span class="text-xs text-neutral-700 dark:text-neutral-200 truncate">{friend.name}</span>
                             </a>
                         </li>
                     ))}
                 </ul>
             </Box>
 
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-400">
+            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 <Globe size="18" fill="#ffffff10" /> Socials
             </span>
             <Box>
@@ -68,7 +67,7 @@ import Footer from '@/components/Footer.astro'
                             <a
                                 href={social.url}
                                 target="_blank"
-                                class="flex items-center gap-1 font-medium text-neutral-200 transition-colors hover:text-sky-500"
+                                class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200 transition-colors hover:text-sky-500"
                             >
                                 <social.icon size="18" fill="#ffffff10" />
                                 {social.text}
