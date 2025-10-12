@@ -1,10 +1,11 @@
 import type { Info, Social, Skill, Project } from './types'
 import { AlarmClock, BookOpen, Github, Heart, ListMusic, MapPin, User, Twitter } from '@lucide/astro'
 
-import Web from './assets/web.svg';
-import Mobile from './assets/mobile.svg';
-import Desktop from './assets/desktop.svg';
-import Embedded from './assets/embedded.svg';
+import Desktop from "./assets/desktop.svg";
+import Embedded from "./assets/embedded.svg";
+import LastFM from "./assets/lastfm.svg";
+import Mobile from "./assets/mobile.svg";
+import Web from "./assets/web.svg";
 
 export const Information: Info[] = [
     {
@@ -34,19 +35,24 @@ export const Platforms = {
 export const Socials: Social[] = [
     {
         text: 'Donate',
-        url: 'https://s.thororen.com/donate',
+        url: 'https://github.com/sponsors/thororen1234',
         icon: Heart,
     },
     {
         text: 'Twitter',
-        url: 'https://s.thororen.com/twitter',
+        url: 'https://x.com/thororen',
         icon: Twitter,
     },
     {
         text: 'Github',
-        url: 'https://s.thororen.com/github',
+        url: 'https://github.com/thororen1234',
         icon: Github,
     },
+    {
+        text: 'Last.FM',
+        url: 'https://www.last.fm/user/thororen',
+        icon: LastFM
+    }
 ]
 
 export const Skills: Skill[] = [
