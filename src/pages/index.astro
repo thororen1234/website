@@ -9,21 +9,25 @@ import ProjectCard from '@/components/ProjectCard.astro'
 ---
 
 <Layout>
-    <div class="flex flex-col md:flex-row gap-6">
+    <div class="flex flex-col gap-6 md:flex-row">
         <div class="flex-1 space-y-4">
             <!-- Me -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <span
+                class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+            >
                 <UserCircle size="18" /> Me
             </span>
 
             <Box>
-                Hi! I'm Thor! I'm a software developer from the United States of America
-                with experience in languages such as TypeScript, JavaScript, Python, and
-                Go.
+                Hi! I'm Thor! I'm a software developer from the United States of
+                America with experience in languages such as TypeScript,
+                JavaScript, Python, and Go.
             </Box>
 
             <!-- Skills -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <span
+                class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+            >
                 <Star size="18" /> Skills
             </span>
 
@@ -32,49 +36,70 @@ import ProjectCard from '@/components/ProjectCard.astro'
             </Box>
 
             <!-- Projects -->
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <span
+                class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+            >
                 <Notebook size="18" /> Projects
             </span>
 
-            <div class="flex w-full flex-col gap-2 rounded-2xl text-neutral-300">
+            <div
+                class="flex w-full flex-col gap-2 rounded-2xl text-neutral-300"
+            >
                 {Projects.map((project) => <ProjectCard {...project} />)}
             </div>
         </div>
 
-        <aside class="w-full md:w-64 space-y-4">
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+        <aside class="w-full space-y-4 md:w-64">
+            <span
+                class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+            >
                 <Users size="18" /> Friends
             </span>
             <Box>
                 <ul class="grid grid-cols-2 gap-4">
-                    {Friends.map((friend) => (
-                        <li class="min-w-0 overflow-hidden">
-                            <a href={friend.url} target="_blank" rel="noreferrer" class="flex flex-col items-center text-center gap-1" >
-                                <img src={friend.img} alt={friend.alt} class="size-10 rounded-full object-cover"/>
-                                <span class="text-xs text-neutral-700 dark:text-neutral-200 truncate">{friend.name}</span>
-                            </a>
-                        </li>
-                    ))}
+                    {
+                        Friends.map((friend) => (
+                            <li class="min-w-0 overflow-hidden">
+                                <a
+                                    href={friend.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="flex flex-col items-center gap-1 text-center"
+                                >
+                                    <img
+                                        src={friend.img}
+                                        alt={friend.alt}
+                                        class="size-10 rounded-full object-cover"
+                                    />
+                                    <span class="truncate text-xs text-neutral-700 dark:text-neutral-200">
+                                        {friend.name}
+                                    </span>
+                                </a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </Box>
 
-            <span class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <span
+                class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+            >
                 <Globe size="18" /> Socials
             </span>
             <Box>
-                    {
-                        Socials.map((social) => (
-                            <a
-                                href={social.url}
-                                target="_blank"
-                                class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200 transition-colors hover:text-sky-500"
-                            >
-                                <social.icon size="18" width="18" height="18" />
-                                {social.text}
-                            </a>
-                        ))
-                    }
-                </Box>
+                {
+                    Socials.map((social) => (
+                        <a
+                            href={social.url}
+                            target="_blank"
+                            class="flex items-center gap-1 font-medium text-neutral-700 transition-colors hover:text-sky-500 dark:text-neutral-200"
+                        >
+                            <social.icon size="18" width="18" height="18" />
+                            {social.text}
+                        </a>
+                    ))
+                }
+            </Box>
         </aside>
     </div>
 </Layout>

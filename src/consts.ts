@@ -1,11 +1,20 @@
 import type { Info, Social, Skill, Project } from './types'
-import { AlarmClock, BookOpen, Github, Heart, ListMusic, MapPin, User, Twitter } from '@lucide/astro'
+import {
+    AlarmClock,
+    BookOpen,
+    Github,
+    Heart,
+    ListMusic,
+    MapPin,
+    User,
+    Twitter,
+} from '@lucide/astro'
 
-import Desktop from "./assets/desktop.svg";
-import Embedded from "./assets/embedded.svg";
-import LastFM from "./assets/lastfm.svg";
-import Mobile from "./assets/mobile.svg";
-import Web from "./assets/web.svg";
+import Desktop from './assets/desktop.svg'
+import Embedded from './assets/embedded.svg'
+import LastFM from './assets/lastfm.svg'
+import Mobile from './assets/mobile.svg'
+import Web from './assets/web.svg'
 
 export const Information: Info[] = [
     {
@@ -51,8 +60,8 @@ export const Socials: Social[] = [
     {
         text: 'Last.FM',
         url: 'https://www.last.fm/user/thororen',
-        icon: LastFM
-    }
+        icon: LastFM,
+    },
 ]
 
 export const Skills: Skill[] = [
@@ -115,22 +124,22 @@ export const Projects: Project[] = [
 
 export const Friends = [
     {
-        url: "https://www.naibuu.dev",
-        img: "https://avatars.githubusercontent.com/u/81579850",
-        alt: "itsnaibuu",
-        name: "Naibuu"
+        url: 'https://www.naibuu.dev',
+        img: 'https://avatars.githubusercontent.com/u/81579850',
+        alt: 'itsnaibuu',
+        name: 'Naibuu',
     },
     {
-        url: "https://creations.works",
-        img: "https://creations.works/public/assets/pfp.png",
-        alt: "creations",
-        name: "creations"
+        url: 'https://creations.works',
+        img: 'https://creations.works/public/assets/pfp.png',
+        alt: 'creations',
+        name: 'creations',
     },
     {
-        url: "https://indi.is-a-skid.cc",
-        img: "https://avatars.githubusercontent.com/u/150982280?v=4",
-        alt: "krystalskull",
-        name: "Krystal"
+        url: 'https://indi.is-a-skid.cc',
+        img: 'https://avatars.githubusercontent.com/u/150982280?v=4',
+        alt: 'krystalskull',
+        name: 'Krystal',
     },
     {
         url: 'https://cortex.rest',

@@ -6,31 +6,44 @@ import Box from '@/components/Box.astro'
 ---
 
 <aside class="flex w-full flex-col gap-4 md:max-w-[240px]">
-    <div class="flex w-full flex-col items-center gap-4 mb-2">
+    <div class="mb-2 flex w-full flex-col items-center gap-4">
         <Avatar size={240} />
     </div>
 
     <div class="flex items-start gap-2">
-        <span class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+        <span
+            class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+        >
             <BookUser size="18" /> Badges
         </span>
 
-        <div id="clan-badge-container" class="hidden items-center gap-1 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-md">
-            <img id="clan-badge-img" src="" alt="Clan Badge" class="w-3 h-3" />
-            <span id="clan-badge-name" class="text-xs text-neutral-700 dark:text-neutral-200"></span>
+        <div
+            id="clan-badge-container"
+            class="hidden items-center gap-1 rounded-md bg-zinc-100 px-2 py-1 dark:bg-zinc-900"
+        >
+            <img id="clan-badge-img" src="" alt="Clan Badge" class="h-3 w-3" />
+            <span
+                id="clan-badge-name"
+                class="text-xs text-neutral-700 dark:text-neutral-200"></span>
         </div>
     </div>
 
     <Box>
-        <div id="badges-container" class="flex flex-wrap gap-2 mt-1"></div>
+        <div id="badges-container" class="mt-1 flex flex-wrap gap-2"></div>
     </Box>
 
     <div class="flex items-start gap-2">
-        <span class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            <BookUser size="18"/> Socials
+        <span
+            class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+        >
+            <BookUser size="18" /> Socials
         </span>
 
-        <div id="platform-icons" class="flex gap-1 text-neutral-600 dark:text-neutral-400"></div>
+        <div
+            id="platform-icons"
+            class="flex gap-1 text-neutral-600 dark:text-neutral-400"
+        >
+        </div>
     </div>
 
     <Box>
@@ -43,17 +56,25 @@ import Box from '@/components/Box.astro'
             ))
         }
 
-        <span class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
+        <span
+            class="flex items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200"
+        >
             <MiscIcons.AlarmClock size="18" />
             <span id="user-timezone-text">--:--</span>
         </span>
 
-        <span id="custom-status-container" class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
+        <span
+            id="custom-status-container"
+            class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200"
+        >
             <MiscIcons.BookOpen size="18" class="shrink-0" />
             <span id="custom-status-text" class="truncate"></span>
         </span>
 
-        <span id="activity-container" class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200">
+        <span
+            id="activity-container"
+            class="hidden items-center gap-1 font-medium text-neutral-700 dark:text-neutral-200"
+        >
             <MiscIcons.ListMusic size="18" class="shrink-0" />
             <span id="activity-text" class="truncate"></span>
         </span>
@@ -61,141 +82,168 @@ import Box from '@/components/Box.astro'
 </aside>
 
 <script>
-  const userId = "848339671629299742";
+    const userId = '848339671629299742'
 
-  const platformIcons = {
-    web: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
-    mobile: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>',
-    desktop: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/></svg>',
-    embedded: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>'
-  };
-
-  async function fetchUserData() {
-    try {
-      const lanyardRes = await fetch(`https://lanyard.atums.world/v1/users/${userId}`);
-      if (!lanyardRes.ok) throw new Error('Lanyard fetch failed');
-
-      const lanyardJson = await lanyardRes.json();
-      const lanyardData = lanyardJson?.data;
-      const user = lanyardData?.discord_user;
-      const clan = user?.primary_guild;
-
-      if (clan?.tag && clan?.identity_guild_id && clan?.badge) {
-        const clanBadgeContainer = document.getElementById('clan-badge-container');
-        const clanBadgeImg = document.getElementById('clan-badge-img');
-        const clanBadgeName = document.getElementById('clan-badge-name');
-
-        if (clanBadgeContainer && clanBadgeImg && clanBadgeName) {
-          clanBadgeImg.src = `https://cdn.discordapp.com/clan-badges/${clan.identity_guild_id}/${clan.badge}.png?size=16`;
-          clanBadgeName.textContent = clan.tag;
-          clanBadgeContainer.classList.remove('hidden');
-          clanBadgeContainer.classList.add('flex');
-        }
-      }
-
-      const platformIconsContainer = document.getElementById('platform-icons');
-      if (platformIconsContainer) {
-        let iconsHTML = '';
-        if (lanyardData?.active_on_discord_web) iconsHTML += platformIcons.web;
-        if (lanyardData?.active_on_discord_mobile) iconsHTML += platformIcons.mobile;
-        if (lanyardData?.active_on_discord_desktop) iconsHTML += platformIcons.desktop;
-        if (lanyardData?.active_on_discord_embedded) iconsHTML += platformIcons.embedded;
-        platformIconsContainer.innerHTML = iconsHTML;
-      }
-
-      const customStatus = lanyardData?.activities?.find((a) => a.type === 4);
-      if (customStatus?.state) {
-        const customStatusContainer = document.getElementById('custom-status-container');
-        const customStatusText = document.getElementById('custom-status-text');
-        if (customStatusContainer && customStatusText) {
-          customStatusText.textContent = customStatus.state;
-          customStatusContainer.classList.remove('hidden');
-          customStatusContainer.classList.add('flex');
-        }
-      }
-
-      const activity = lanyardData?.activities?.find((a) => a.type !== 4);
-      if (activity) {
-        const activityContainer = document.getElementById('activity-container');
-        const activityText = document.getElementById('activity-text');
-        if (activityContainer && activityText) {
-          activityText.textContent = activity?.details || activity?.name || '';
-          activityContainer.classList.remove('hidden');
-          activityContainer.classList.add('flex');
-        }
-      }
-
-      await fetchBadges(lanyardData);
-    } catch (error) {
-      console.error("Error fetching user data:", error);
+    const platformIcons = {
+        web: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
+        mobile: '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>',
+        desktop:
+            '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/></svg>',
+        embedded:
+            '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>',
     }
-  }
 
-  async function fetchBadges(lanyardData) {
-    try {
-      const badges = [];
+    async function fetchUserData() {
+        try {
+            const lanyardRes = await fetch(
+                `https://lanyard.atums.world/v1/users/${userId}`,
+            )
+            if (!lanyardRes.ok) throw new Error('Lanyard fetch failed')
 
-      const badgeRes = await fetch(`https://badges.equicord.org/${userId}?seperated=true&capitalize=true`);
-      if (badgeRes.ok) {
-        const badgeData = await badgeRes.json();
-        if (badgeData?.badges) {
-          Object.entries(badgeData.badges).forEach(([type, badgeList]) => {
-            if (Array.isArray(badgeList)) {
-              badgeList.forEach((badge) => {
-                if (badge?.badge) {
-                  badges.push({
-                    tooltip: `${type}: ${badge.tooltip}`,
-                    icon: badge.badge,
-                  });
+            const lanyardJson = await lanyardRes.json()
+            const lanyardData = lanyardJson?.data
+            const user = lanyardData?.discord_user
+            const clan = user?.primary_guild
+
+            if (clan?.tag && clan?.identity_guild_id && clan?.badge) {
+                const clanBadgeContainer = document.getElementById(
+                    'clan-badge-container',
+                )
+                const clanBadgeImg = document.getElementById('clan-badge-img')
+                const clanBadgeName = document.getElementById('clan-badge-name')
+
+                if (clanBadgeContainer && clanBadgeImg && clanBadgeName) {
+                    clanBadgeImg.src = `https://cdn.discordapp.com/clan-badges/${clan.identity_guild_id}/${clan.badge}.png?size=16`
+                    clanBadgeName.textContent = clan.tag
+                    clanBadgeContainer.classList.remove('hidden')
+                    clanBadgeContainer.classList.add('flex')
                 }
-              });
             }
-          });
+
+            const platformIconsContainer =
+                document.getElementById('platform-icons')
+            if (platformIconsContainer) {
+                let iconsHTML = ''
+                if (lanyardData?.active_on_discord_web)
+                    iconsHTML += platformIcons.web
+                if (lanyardData?.active_on_discord_mobile)
+                    iconsHTML += platformIcons.mobile
+                if (lanyardData?.active_on_discord_desktop)
+                    iconsHTML += platformIcons.desktop
+                if (lanyardData?.active_on_discord_embedded)
+                    iconsHTML += platformIcons.embedded
+                platformIconsContainer.innerHTML = iconsHTML
+            }
+
+            const customStatus = lanyardData?.activities?.find(
+                (a) => a.type === 4,
+            )
+            if (customStatus?.state) {
+                const customStatusContainer = document.getElementById(
+                    'custom-status-container',
+                )
+                const customStatusText =
+                    document.getElementById('custom-status-text')
+                if (customStatusContainer && customStatusText) {
+                    customStatusText.textContent = customStatus.state
+                    customStatusContainer.classList.remove('hidden')
+                    customStatusContainer.classList.add('flex')
+                }
+            }
+
+            const activity = lanyardData?.activities?.find((a) => a.type !== 4)
+            if (activity) {
+                const activityContainer =
+                    document.getElementById('activity-container')
+                const activityText = document.getElementById('activity-text')
+                if (activityContainer && activityText) {
+                    activityText.textContent =
+                        activity?.details || activity?.name || ''
+                    activityContainer.classList.remove('hidden')
+                    activityContainer.classList.add('flex')
+                }
+            }
+
+            await fetchBadges(lanyardData)
+        } catch (error) {
+            console.error('Error fetching user data:', error)
         }
-      }
-
-      const badgesContainer = document.getElementById('badges-container');
-      if (badgesContainer && badges.length > 0) {
-        badgesContainer.innerHTML = badges.map(badge =>
-          `<img src="${badge.icon}" alt="${badge.tooltip}" title="${badge.tooltip}" class="size-4 rounded" />`
-        ).join('');
-      }
-    } catch (error) {
-      console.error("Error fetching badges:", error);
-    }
-  }
-
-  async function fetchTimezone() {
-    const timezoneRes = await fetch(`https://timezone.creations.works/get?id=${userId}`);
-    if (timezoneRes.ok) {
-      const timezoneData = await timezoneRes.json();
-      return timezoneData.timezone || 'America/New_York';
-    }
-    return 'America/New_York';
-  }
-
-  function initTimezoneClock(timezone, elementId) {
-    const el = document.getElementById(elementId);
-    if (!el) return;
-
-    const formatter = new Intl.DateTimeFormat("en-US", {
-      timeZone: timezone,
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-    });
-
-    function updateTime() {
-      el.textContent = formatter.format(new Date());
     }
 
-    updateTime();
-    return setInterval(updateTime, 60000);
-  }
+    async function fetchBadges(lanyardData) {
+        try {
+            const badges = []
 
-  (async () => {
-    await fetchUserData();
-    const tz = await fetchTimezone();
-    initTimezoneClock(tz, "user-timezone-text");
-  })();
+            const badgeRes = await fetch(
+                `https://badges.equicord.org/${userId}?seperated=true&capitalize=true`,
+            )
+            if (badgeRes.ok) {
+                const badgeData = await badgeRes.json()
+                if (badgeData?.badges) {
+                    Object.entries(badgeData.badges).forEach(
+                        ([type, badgeList]) => {
+                            if (Array.isArray(badgeList)) {
+                                badgeList.forEach((badge) => {
+                                    if (badge?.badge) {
+                                        badges.push({
+                                            tooltip: `${type}: ${badge.tooltip}`,
+                                            icon: badge.badge,
+                                        })
+                                    }
+                                })
+                            }
+                        },
+                    )
+                }
+            }
+
+            const badgesContainer = document.getElementById('badges-container')
+            if (badgesContainer && badges.length > 0) {
+                badgesContainer.innerHTML = badges
+                    .map(
+                        (badge) =>
+                            `<img src="${badge.icon}" alt="${badge.tooltip}" title="${badge.tooltip}" class="size-4 rounded" />`,
+                    )
+                    .join('')
+            }
+        } catch (error) {
+            console.error('Error fetching badges:', error)
+        }
+    }
+
+    async function fetchTimezone() {
+        const timezoneRes = await fetch(
+            `https://timezone.creations.works/get?id=${userId}`,
+        )
+        if (timezoneRes.ok) {
+            const timezoneData = await timezoneRes.json()
+            return timezoneData.timezone || 'America/New_York'
+        }
+        return 'America/New_York'
+    }
+
+    function initTimezoneClock(timezone, elementId) {
+        const el = document.getElementById(elementId)
+        if (!el) return
+
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: timezone,
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+        })
+
+        function updateTime() {
+            el.textContent = formatter.format(new Date())
+        }
+
+        updateTime()
+        return setInterval(updateTime, 60000)
+    }
+
+    ;(async () => {
+        await fetchUserData()
+        const tz = await fetchTimezone()
+        initTimezoneClock(tz, 'user-timezone-text')
+    })()
 </script>
