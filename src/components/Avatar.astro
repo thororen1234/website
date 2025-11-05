@@ -60,7 +60,7 @@ const { size } = Astro.props
     async function fetchUserStatus() {
         try {
             const lanyardResponse = await fetch(
-                `https://lanyard.atums.world/v1/users/${userId}`,
+                `https://lanyard.equicord.org/v1/users/${userId}`,
             )
             if (!lanyardResponse.ok) throw new Error('Lanyard fetch failed')
 

@@ -131,20 +131,77 @@ export const Friends = [
     },
     {
         url: 'https://creations.works',
-        img: 'https://creations.works/public/assets/pfp.png',
+        img: 'https://creations.works/api/pfp',
         alt: 'creations',
         name: 'creations',
     },
     {
-        url: 'https://indi.is-a-skid.cc',
-        img: 'https://avatars.githubusercontent.com/u/150982280?v=4',
+        url: 'https://krstlskll69.github.io/',
+        img: 'https://avatars.githubusercontent.com/u/150982280',
         alt: 'krystalskull',
         name: 'Krystal',
     },
     {
         url: 'https://cortex.rest',
-        img: 'https://avatars.githubusercontent.com/u/126973723?v=4',
+        img: 'https://avatars.githubusercontent.com/u/126973723',
         alt: 'environment.',
         name: 'Cortex',
+    },
+]
+
+export const Contributions = [
+    {
+        url: 'https://vencord.dev',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7007-80d8-136a2d37871f',
+        alt: 'vencord',
+        name: 'Vencord',
+    },
+    {
+        url: 'https://github.com/verticalsync/Suncord',
+        img: 'https://images.equicord.org/api/undefined/files/raw/0199e71a-555f-7000-9737-6dfa6651bb71',
+        alt: 'suncord',
+        name: 'Suncord',
+    },
+    {
+        url: 'https://egglord.dev',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7000-a65a-cd85cad3249d',
+        alt: 'egglord',
+        name: 'Egglord',
+    },
+    {
+        url: 'https://krystal.thororen.com',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d0-aed9-7000-841d-1df0909cf0ae',
+        alt: 'krystalskullwebsite',
+        name: 'Krystals Website',
+    },
+    {
+        url: 'https://vendroid.nin0.dev/',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d6-cc0d-7000-b8b2-e083a6a2c441',
+        alt: 'vendroidenhanced',
+        name: 'Vendroid+',
+    },
+    {
+        url: 'https://github.com/Faf4a/ThemeLibrary',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7004-9c33-5479e9710c56',
+        alt: 'themelibrary',
+        name: 'Theme Library',
+    },
+    {
+        url: 'https://github.com/Inrixia/luna-plugins',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7005-85fe-0277093e7068',
+        alt: 'lunaplugins',
+        name: 'Luna Plugins',
+    },
+    {
+        url: 'https://github.com/UserPFP/website',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7003-8640-60fc58b4bb6c',
+        alt: 'userpfpwebsite',
+        name: 'UserPFP Website',
+    },
+    {
+        url: 'https://github.com/UserPFP/vencordplugin',
+        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7001-830d-b3b08e5eb143',
+        alt: 'userpfpvencordplugin',
+        name: 'UserPFP Plugin',
     },
 ]
