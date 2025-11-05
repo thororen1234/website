@@ -136,7 +136,7 @@ export const Friends = [
         name: 'creations',
     },
     {
-        url: 'https://krstlskll69.github.io/',
+        url: 'https://krystal.thororen.com',
         img: 'https://avatars.githubusercontent.com/u/150982280',
         alt: 'krystalskull',
         name: 'Krystal',
@@ -151,7 +151,7 @@ export const Friends = [
 
 export const Contributions = [
     {
-        url: 'https://vencord.dev',
+        url: 'https://github.com/Vendicated/Vencord',
         img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7007-80d8-136a2d37871f',
         alt: 'vencord',
         name: 'Vencord',
@@ -163,22 +163,22 @@ export const Contributions = [
         name: 'Suncord',
     },
     {
-        url: 'https://egglord.dev',
+        url: 'https://github.com/Spiderjockey02/Discord-Bot',
         img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7000-a65a-cd85cad3249d',
         alt: 'egglord',
         name: 'Egglord',
     },
     {
-        url: 'https://krystal.thororen.com',
+        url: 'https://github.com/KrstlSkll69/krstlskll69.github.com',
         img: 'https://images.equicord.org/api/undefined/files/raw/019a51d0-aed9-7000-841d-1df0909cf0ae',
         alt: 'krystalskullwebsite',
         name: 'Krystals Website',
     },
     {
-        url: 'https://vendroid.nin0.dev/',
+        url: 'https://github.com/VendroidEnhanced/plugin',
         img: 'https://images.equicord.org/api/undefined/files/raw/019a51d6-cc0d-7000-b8b2-e083a6a2c441',
         alt: 'vendroidenhanced',
-        name: 'Vendroid+',
+        name: 'Vendroid Plugin',
     },
     {
         url: 'https://github.com/Faf4a/ThemeLibrary',
