@@ -192,16 +192,4 @@ export const Contributions = [
         alt: 'lunaplugins',
         name: 'Luna Plugins',
     },
-    {
-        url: 'https://github.com/UserPFP/website',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7003-8640-60fc58b4bb6c',
-        alt: 'userpfpwebsite',
-        name: 'UserPFP Website',
-    },
-    {
-        url: 'https://github.com/UserPFP/vencordplugin',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7001-830d-b3b08e5eb143',
-        alt: 'userpfpvencordplugin',
-        name: 'UserPFP Plugin',
-    },
 ]
