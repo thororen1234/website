@@ -184,7 +184,7 @@ export const Contributions = [
         url: 'https://github.com/Faf4a/ThemeLibrary',
         img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7004-9c33-5479e9710c56',
         alt: 'themelibrary',
-        name: 'Theme Library',
+        name: 'ThemeLibrary',
     },
     {
         url: 'https://github.com/Inrixia/luna-plugins',
