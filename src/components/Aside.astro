@@ -18,6 +18,12 @@ import Box from '@/components/Box.astro'
         </span>
 
         <div
+            id="platform-icons"
+            class="flex mt-1 gap-1 text-neutral-600 dark:text-neutral-400"
+        >
+        </div>
+
+        <div
             id="clan-badge-container"
             class="hidden items-center gap-1 rounded-md bg-zinc-100 px-2 py-1 dark:bg-zinc-900"
         >
@@ -32,19 +38,11 @@ import Box from '@/components/Box.astro'
         <div id="badges-container" class="mt-1 flex flex-wrap gap-2"></div>
     </Box>
 
-    <div class="flex items-start gap-2">
-        <span
-            class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
-        >
-            <UserCircle size="18" /> About
-        </span>
-
-        <div
-            id="platform-icons"
-            class="flex gap-1 text-neutral-600 dark:text-neutral-400"
-        >
-        </div>
-    </div>
+    <span
+        class="flex gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+    >
+        <UserCircle size="18" /> About
+    </span>
 
     <Box>
         {
