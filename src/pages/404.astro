@@ -3,7 +3,7 @@ import Empty from '../layouts/Empty.astro'
 import { BadgeAlert, Undo } from '@lucide/astro'
 ---
 
-<Empty>
+<Layout>
     <div class="flex h-dvh w-full flex-col items-center justify-center gap-2">
         <span class="flex items-center gap-1 font-medium text-red-400">
             <BadgeAlert size={20} /> The page you're looking for cannot be found!
@@ -16,4 +16,4 @@ import { BadgeAlert, Undo } from '@lucide/astro'
             <Undo size={20} /> Return
         </a>
     </div>
-</Empty>
+</Layout>
