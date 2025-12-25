@@ -84,13 +84,6 @@ export const Skills: Skill[] = [
 
 export const Projects: Project[] = [
     {
-        start: 2025,
-        title: 'Equicord',
-        description:
-            'Equicord is an enhanced version of Vencord with a wide variety of plugins. Currently maintaining and working on the website.',
-        url: 'https://equicord.org',
-    },
-    {
         start: 2023,
         title: 'Equicord',
         description:
