@@ -1,8 +1,9 @@
 ---
-import { Globe, UserCircle, BookMarked, BookUser } from '@lucide/astro'
+import { Users, Globe, UserCircle, BookMarked, BookUser } from '@lucide/astro'
 import { Friends, Information, MiscIcons, Platforms, Socials } from '@/consts'
-import Avatar from '@/components/Avatar.astro'
-import Box from '@/components/Box.astro'
+import Avatar from '@/components/Base/Avatar.astro'
+import Box from '@/components/Base/Box.astro'
+import Card from '@/components/Card.astro'
 ---
 
 <aside class="flex w-full flex-col gap-4 md:max-w-[240px]">
@@ -97,6 +98,16 @@ import Box from '@/components/Box.astro'
                 </a>
             ))
         }
+    </Box>
+    <span
+        class="flex items-center gap-1 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+    >
+        <Users size="18" /> Friends
+    </span>
+    <Box class="grid grid-cols-2 gap-4">
+        {Friends.map(friend => (
+            <Card {...friend} />
+        ))}
     </Box>
 </aside>
 

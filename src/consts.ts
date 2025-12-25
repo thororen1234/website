@@ -105,12 +105,36 @@ export const Projects: Project[] = [
         url: 'https://surg.fyi/',
     },
     {
+        start: 2024,
+        end: 2025,
+        title: 'Surge',
+        description:
+            'Surge was a continuation of Hybris after it was abandoned and was greatly expanded upon but ultimately abandoned as well.',
+        url: 'https://github.com/SurgeLauncher'
+    },
+    {
+        start: 2023,
+        end: 2023,
+        title: 'Hybris',
+        description:
+            'Hybris was a Minecraft client that was built around the success of Solar Tweaks after it permanently shut down but was abandoned.',
+        url: 'https://github.com/hybrismc',
+    },
+    {
         start: 2022,
         end: 2023,
         title: 'Solar Tweaks',
         description:
             'Solar Tweaks is a custom Lunar Client launcher that provides different modifications for the client.',
         url: 'https://github.com/hybrismc',
+    },
+    {
+        start: 2022,
+        end: 2022,
+        title: 'Neoblade',
+        description:
+            'Neoblade was a continuation of Beycord after multiple attempts from others such as Beycord+ or Beycord (2021) but was considered a failed project and abandoned.',
+        url: 'https://github.com/disbored/beycord'
     },
     {
         start: 2020,
@@ -146,50 +170,5 @@ export const Friends = [
         img: 'https://avatars.githubusercontent.com/u/126973723',
         alt: 'environment.',
         name: 'Cortex',
-    },
-]
-
-export const Contributions = [
-    {
-        url: 'https://github.com/Vendicated/Vencord',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7007-80d8-136a2d37871f',
-        alt: 'vencord',
-        name: 'Vencord',
-    },
-    {
-        url: 'https://github.com/verticalsync/Suncord',
-        img: 'https://images.equicord.org/api/undefined/files/raw/0199e71a-555f-7000-9737-6dfa6651bb71',
-        alt: 'suncord',
-        name: 'Suncord',
-    },
-    {
-        url: 'https://github.com/Spiderjockey02/Discord-Bot',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7000-a65a-cd85cad3249d',
-        alt: 'egglord',
-        name: 'Egglord',
-    },
-    {
-        url: 'https://github.com/KrstlSkll69/krstlskll69.github.com',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d0-aed9-7000-841d-1df0909cf0ae',
-        alt: 'krystalskullwebsite',
-        name: 'Krystals Website',
-    },
-    {
-        url: 'https://github.com/VendroidEnhanced/plugin',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d6-cc0d-7000-b8b2-e083a6a2c441',
-        alt: 'vendroidenhanced',
-        name: 'Vendroid Plugin',
-    },
-    {
-        url: 'https://github.com/Faf4a/ThemeLibrary',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7004-9c33-5479e9710c56',
-        alt: 'themelibrary',
-        name: 'ThemeLibrary',
-    },
-    {
-        url: 'https://github.com/Inrixia/luna-plugins',
-        img: 'https://images.equicord.org/api/undefined/files/raw/019a51d5-b3a1-7005-85fe-0277093e7068',
-        alt: 'lunaplugins',
-        name: 'Luna Plugins',
     },
 ]
