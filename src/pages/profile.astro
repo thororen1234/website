@@ -12,7 +12,7 @@ import Head from '@/components/Layout/Head.astro'
         />
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
     </head>
-    <body>
+    <body class="wrapper">
         <main class="wrapper">
             <section class="card">
                 <div class="card-inner">
@@ -62,32 +62,17 @@ import Head from '@/components/Layout/Head.astro'
         color-scheme: dark;
     }
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
     html {
-        min-height: 100%;
+        max-width: 100%;
     }
 
     body {
-        margin: 0;
-        min-height: 100vh;
+        min-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
         font-family: Inter, system-ui, sans-serif;
         color: #e5e7eb;
-        background:
-            radial-gradient(
-                circle at top,
-                rgba(59, 130, 246, 0.16),
-                transparent 25%
-            ),
-            linear-gradient(180deg, #09101d 0%, #05070f 100%);
     }
 
     img {
@@ -96,12 +81,12 @@ import Head from '@/components/Layout/Head.astro'
     }
 
     .wrapper {
-        width: min(100%, 620px);
-        margin: 0 auto;
+        max-width: 100%;
+        justify-content: left;
     }
 
     .card {
-        width: 100%;
+        max-width: 100%;
         border-radius: 20px;
         background: rgba(15, 23, 42, 0.96);
         border: 1px solid rgba(148, 163, 184, 0.12);
