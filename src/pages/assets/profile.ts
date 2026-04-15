@@ -1,5 +1,3 @@
-import { promises as fs } from 'fs'
-
 const userId = '848339671629299742'
 const fallbackUrl = 'https://www.thororen.com/assets/pfp.png'
 
